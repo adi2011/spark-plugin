@@ -248,7 +248,7 @@ def enable_spark(plugin, port=8268 ,rune=None, restrictions=[]):
     res = "nodeid="+plugin.rpc.getinfo()["id"]+addr+'&'+"token="+this_rune.to_base64()
     qr = pyqrcode.create(res, encoding="ascii")
     qr.show()
-    return "Scan the QR and have fun!"
+    return res
 
 
 @plugin.method("spark-listpays")
